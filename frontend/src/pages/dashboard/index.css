@@ -1,0 +1,55 @@
+.balloon {
+    width: auto; /* Width of the balloon image */
+    height: auto; /* Maintain aspect ratio */
+    animation: float 4s ease-in-out infinite; /* Floating animation */
+    position: relative; /* Necessary for absolute positioning */
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Float upwards */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
+
+  /* Style for small analytics cards */
+.AnalyticCard {
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for small analytics cards */
+.AnalyticCard:hover {
+  transform: translateY(-5px);  /* Slight lift effect */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Adding smooth transitions for all elements */
+.AnalyticCard .MuiCardContent-root {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Card content background color change on hover */
+.AnalyticCard:hover .MuiCardContent-root {
+  background-color: #f1f1f1;
+}
+
+.AnalyticCard .MuiTypography-root {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Title text color change on hover */
+.AnalyticCard:hover .MuiTypography-root {
+  color: #6a11cb;  /* A purple color */
+}
